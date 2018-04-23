@@ -31,9 +31,13 @@ public class FrameLogin extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         fieldPassword = new javax.swing.JPasswordField();
-        tombolOk = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        fieldIseng = new javax.swing.JTextPane();
+        fieldAlamatDb = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        tombolOk1 = new javax.swing.JButton();
+        fieldPasswordDb = new javax.swing.JPasswordField();
+        jLabel5 = new javax.swing.JLabel();
+        fieldUserDb = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,43 +51,70 @@ public class FrameLogin extends javax.swing.JFrame {
 
         jLabel2.setText("pass");
 
-        tombolOk.setText("OK");
-        tombolOk.addActionListener(new java.awt.event.ActionListener() {
+        fieldAlamatDb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tombolOkActionPerformed(evt);
+                fieldAlamatDbActionPerformed(evt);
             }
         });
 
-        jScrollPane1.setViewportView(fieldIseng);
+        jLabel3.setText("alamat_db");
+
+        jLabel4.setText("user_db");
+
+        tombolOk1.setText("OK");
+        tombolOk1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombolOk1ActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setText("pass_db");
+
+        fieldUserDb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldUserDbActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(fieldUser, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
+                    .addComponent(fieldPassword))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addComponent(tombolOk))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addComponent(fieldAlamatDb, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fieldUserDb, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel5)
                         .addGap(32, 32, 32)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(fieldUser, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
-                            .addComponent(fieldPassword))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tombolOk1)
+                            .addComponent(fieldPasswordDb, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(149, 149, 149))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
+                .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(fieldUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -92,9 +123,22 @@ public class FrameLogin extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(fieldPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(22, 22, 22))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(fieldAlamatDb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tombolOk)))
-                .addContainerGap(60, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(fieldUserDb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(13, 13, 13)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(fieldPasswordDb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)))
+                .addComponent(tombolOk1)
+                .addContainerGap(136, Short.MAX_VALUE))
         );
 
         pack();
@@ -104,16 +148,24 @@ public class FrameLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldUserActionPerformed
 
-    private void tombolOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolOkActionPerformed
+    private void fieldAlamatDbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldAlamatDbActionPerformed
         // TODO add your handling code here:
-        String user = fieldUser.getText();
-        String password = fieldPassword.getText();
-        fieldIseng.setText("user : " + user + "\n password :" + password);
-        
+    }//GEN-LAST:event_fieldAlamatDbActionPerformed
+
+    private void tombolOk1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolOk1ActionPerformed
+        // TODO add your handling code here:
+        String alamat = fieldAlamatDb.getText();
+        String user = fieldUserDb.getText();
+        String pass = fieldPasswordDb.getText();
+        SqlConnection.setLogin("jdbc:mysql://" + alamat, user, pass);
         FrameAdmin frameAdmin = new FrameAdmin();
-        frameAdmin.setDefaultCloseOperation(HIDE_ON_CLOSE);
         frameAdmin.setVisible(true);
-    }//GEN-LAST:event_tombolOkActionPerformed
+        frameAdmin.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_tombolOk1ActionPerformed
+
+    private void fieldUserDbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldUserDbActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldUserDbActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,12 +203,16 @@ public class FrameLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextPane fieldIseng;
+    private javax.swing.JTextField fieldAlamatDb;
     private javax.swing.JPasswordField fieldPassword;
+    private javax.swing.JPasswordField fieldPasswordDb;
     private javax.swing.JTextField fieldUser;
+    private javax.swing.JTextField fieldUserDb;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton tombolOk;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JButton tombolOk1;
     // End of variables declaration//GEN-END:variables
 }

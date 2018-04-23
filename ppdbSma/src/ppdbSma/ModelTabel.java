@@ -19,7 +19,7 @@ public class ModelTabel extends AbstractTableModel{
     }
     public void imporDbSekolah(){
         try {
-            SqlConnection.setLogin("jdbc:mysql://localhost:9993/ppdbSmanDepok", "herbiejago", "sudo");
+//            SqlConnection.setLogin("jdbc:mysql://localhost:9993/ppdbSmanDepok", "herbiejago", "sudo");
             String sql = "select * from sekolah";
             java.sql.Connection conn = (Connection)SqlConnection.SqlConnectionDB();
             java.sql.Statement stm = conn.createStatement();

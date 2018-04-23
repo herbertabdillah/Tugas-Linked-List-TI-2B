@@ -153,4 +153,7 @@ public class ProsesSeleksi {
         }
         
     }
+    public List<Sekolah> getListSekolah(){
+        return listSemuaSekolah;
+    }
 }
