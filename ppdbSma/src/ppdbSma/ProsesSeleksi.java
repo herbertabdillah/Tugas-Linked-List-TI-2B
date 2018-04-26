@@ -140,6 +140,7 @@ public class ProsesSeleksi {
     public Sekolah getSekolah(int index){
         return listSemuaSekolah.get(index);
     }
+    //Method tampilkan di console
     public void tampilkan(){
         for(int i = 0; i < listSemuaSekolah.size(); i++) {
             Sekolah sekolah = listSemuaSekolah.get(i);
