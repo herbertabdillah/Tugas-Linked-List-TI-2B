@@ -3,17 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ppdbSma;
+package gui;
 
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
+import logic.SqlConnection;
 
 /**
  *
  * @author Lenovo
  */
-public class FormSiswaPilih extends javax.swing.JFrame {
+public class FrameSiswaPilih extends javax.swing.JFrame {
 
     /**
      * Creates new form FormSiswaPilih
@@ -34,7 +35,7 @@ public class FormSiswaPilih extends javax.swing.JFrame {
 
         }
     }
-    public FormSiswaPilih() {
+    public FrameSiswaPilih() {
         imporDbSekolah();
         initComponents();
         
