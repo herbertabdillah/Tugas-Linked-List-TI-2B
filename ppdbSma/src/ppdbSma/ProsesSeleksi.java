@@ -151,7 +151,27 @@ public class ProsesSeleksi {
             System.out.println("___________");
             System.out.println("___________");
         }
-        
+    }
+    public void exporHasilKeDb(){
+         for(int i =0; i < listSemuaSekolah.size(); i++){
+            Sekolah sekolah = listSemuaSekolah.get(i);
+            for(int k = 0; k < sekolah.listTerima.size(); k++) {
+                NodeSiswaSekolah siswaSekolahKeterima = sekolah.listTerima.get(k);
+                System.out.println(siswaSekolahKeterima.getSiswa().getNama());
+                try {
+                    String sql = "insert into sekolahTerima values(" +
+                        sekolah.getKodeSekolah() +
+                        ", " + siswaSekolahKeterima.getSiswa().getNisn() + ")";
+                    System.out.println(sql);
+                    java.sql.Connection conn = (Connection)SqlConnection.SqlConnectionDB();
+                    java.sql.Statement stm = conn.createStatement();
+                    int executeUpdate = stm.executeUpdate(sql);
+                } catch(Exception e) {
+                    System.out.println(e.toString());
+                }
+            }
+            
+        }
     }
     public List<Sekolah> getListSekolah(){
         return listSemuaSekolah;

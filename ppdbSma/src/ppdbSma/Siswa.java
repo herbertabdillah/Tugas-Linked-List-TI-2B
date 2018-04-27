@@ -14,8 +14,9 @@ public class Siswa implements Comparable<Siswa>{
     private String nama;
     private double nilai;
     private List<NodeSiswaSekolah> listPilihanSekolah;
-    Siswa(int id, String nama, double nilai){
+    Siswa(int nisn, String nama, double nilai){
 //        setId(id);
+        setNisn(nisn);
         setNama(nama);
         setNilai(nilai);
         listPilihanSekolah = new ArrayList<>();

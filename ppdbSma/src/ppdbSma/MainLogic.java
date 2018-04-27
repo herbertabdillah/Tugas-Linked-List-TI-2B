@@ -10,17 +10,21 @@ public class MainLogic {
         prosesSeleksi.seleksi();
         prosesSeleksi.tampilkan();
         listSemuaSekolah = prosesSeleksi.getListSekolah();
+        prosesSeleksi.exporHasilKeDb();
     }
     public static String getOutput(){
         String output = "";
         for(int i = 0; i < listSemuaSekolah.size(); i++) {
             Sekolah sekolah = listSemuaSekolah.get(i);
-            output = output + sekolah.getNamaSekolah() + "\n";
+            output = output + sekolah.getNamaSekolah() + 
+                    "\nNISN\tNama\n";
             for(int k = 0; k < sekolah.listTerima.size(); k++) {
                 NodeSiswaSekolah nodeCmJurusan = sekolah.listTerima.get(k);
-                output = output + nodeCmJurusan.getSiswa().getNama() + "\n";
+                output = output + 
+                        nodeCmJurusan.getSiswa().getNisn() + "\t" +
+                        nodeCmJurusan.getSiswa().getNama() + "\n";
             }
-            output = output + "___________\n";
+            output = output + "____________________________\n";
         }
         return output;
     }
