@@ -3,11 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ppdbSma;
+package gui;
 
 import java.awt.event.*;
 import javax.swing.event.*;
 import javax.swing.table.TableCellEditor;
+import logic.LFAdmin;
+import logic.MainLogic;
 
 /**
  *
@@ -134,7 +136,7 @@ public class FrameAdmin extends javax.swing.JFrame {
     private void tombolProsesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolProsesActionPerformed
         // TODO add your handling code here:
         MainLogic.proses();
-        textPaneOutput.setText(MainLogic.getOutput());
+        textPaneOutput.setText(LFAdmin.getHasil());
     }//GEN-LAST:event_tombolProsesActionPerformed
 
     /**

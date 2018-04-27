@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ppdbSma;
+package gui;
+
+import logic.SqlConnection;
 
 /**
  *
@@ -70,6 +72,12 @@ public class FrameLogin extends javax.swing.JFrame {
             }
         });
 
+        fieldPasswordDb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldPasswordDbActionPerformed(evt);
+            }
+        });
+
         jLabel5.setText("pass_db");
 
         fieldUserDb.addActionListener(new java.awt.event.ActionListener() {
@@ -104,25 +112,20 @@ public class FrameLogin extends javax.swing.JFrame {
                         .addGap(101, 101, 101)
                         .addComponent(tombolSiswa)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel3)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(jLabel5))
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(fieldPasswordDb, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
+                    .addComponent(fieldAlamatDb, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fieldUserDb, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(32, 32, 32)
-                                .addComponent(fieldAlamatDb, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(fieldUserDb, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addGap(32, 32, 32)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tombolOk1)
-                            .addComponent(fieldPasswordDb, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(149, 149, 149))
+                        .addComponent(tombolOk1)
+                        .addGap(79, 79, 79)))
+                .addGap(60, 60, 60))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,12 +140,13 @@ public class FrameLogin extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
                             .addComponent(fieldUserDb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(13, 13, 13)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(fieldPasswordDb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(tombolOk1))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(16, 16, 16)
+                                .addComponent(jLabel5))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(fieldPasswordDb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(fieldNisn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -153,7 +157,9 @@ public class FrameLogin extends javax.swing.JFrame {
                             .addComponent(fieldPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(tombolSiswa)))
-                .addContainerGap(136, Short.MAX_VALUE))
+                .addGap(25, 25, 25)
+                .addComponent(tombolOk1)
+                .addContainerGap(121, Short.MAX_VALUE))
         );
 
         pack();
@@ -184,11 +190,15 @@ public class FrameLogin extends javax.swing.JFrame {
 
     private void tombolSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolSiswaActionPerformed
         // TODO add your handling code here:
-        FormSiswaPilih formSiswaPilih = new FormSiswaPilih();
+        FrameSiswaPilih formSiswaPilih = new FrameSiswaPilih();
         formSiswaPilih.setVisible(true);
         fieldNisn.getText();
         
     }//GEN-LAST:event_tombolSiswaActionPerformed
+
+    private void fieldPasswordDbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldPasswordDbActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldPasswordDbActionPerformed
 
     /**
      * @param args the command line arguments
