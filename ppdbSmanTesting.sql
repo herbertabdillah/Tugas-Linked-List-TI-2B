@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 27, 2018 at 11:33 AM
+-- Generation Time: Apr 30, 2018 at 08:57 AM
 -- Server version: 5.7.21-0ubuntu0.16.04.1
 -- PHP Version: 7.0.28-0ubuntu0.16.04.1
 
@@ -37,11 +37,11 @@ CREATE TABLE `sekolah` (
 --
 
 INSERT INTO `sekolah` (`kodeSekolah`, `namaSekolah`, `kuota`) VALUES
-(0, 'SMA Negeri 1 Depok', 1),
-(1, 'SMA Negeri 2 Depok', 10),
+(0, 'SMA Negeri 1 Depok', 2),
+(1, 'SMA Negeri 2 Depok', 2),
 (2, 'SMA Negeri 3 Depok', 2),
 (3, 'SMA Negeri 4 Depok', 2),
-(4, 'SMA Negeri 5 Depok', 5),
+(4, 'SMA Negeri 5 Depok', 2),
 (5, 'SMA Negeri 6 Depok', 2),
 (6, 'SMA Negeri 7 Depok', 2),
 (7, 'SMA Negeri 8 Depok', 2),
@@ -63,6 +63,18 @@ CREATE TABLE `sekolahTerima` (
   `nisn` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `sekolahTerima`
+--
+
+INSERT INTO `sekolahTerima` (`kodeSekolah`, `nisn`) VALUES
+(4, 0),
+(4, 1),
+(5, 2),
+(0, 3),
+(0, 4),
+(5, 5);
+
 -- --------------------------------------------------------
 
 --
@@ -82,12 +94,12 @@ CREATE TABLE `siswa` (
 --
 
 INSERT INTO `siswa` (`nisn`, `nama`, `nilai`, `kodeSekolahTerima`, `password`) VALUES
-(0, 'Anjay', 100, 0, ''),
-(1, 'Bravo', 70, 0, ''),
-(2, 'Charlie', 80, 0, ''),
-(3, 'Delta', 30, 0, ''),
-(4, 'Echo', 95, 0, ''),
-(5, 'Fanta', 90, 0, '');
+(0, 'Anjay', 100, -1, '0'),
+(1, 'Bravo', 70, -1, '1'),
+(2, 'Charlie', 80, -1, '2'),
+(3, 'Delta', 30, -1, '3'),
+(4, 'Echo', 95, -1, '4'),
+(5, 'Fanta', 90, -1, '5');
 
 -- --------------------------------------------------------
 
