@@ -157,7 +157,7 @@ public class ProsesSeleksi {
         //reset tabel;
         try {
             String sql = "truncate sekolahTerima";
-            System.out.println(sql);
+//            System.out.println(sql);
             java.sql.Connection conn = (Connection)SqlConnection.SqlConnectionDB();
             java.sql.Statement stm = conn.createStatement();
             int executeUpdate = stm.executeUpdate(sql);
@@ -168,13 +168,13 @@ public class ProsesSeleksi {
             Sekolah sekolah = listSemuaSekolah.get(i);
             for(int k = 0; k < sekolah.listTerima.size(); k++) {
                 NodeSiswaSekolah siswaSekolahKeterima = sekolah.listTerima.get(k);
-                System.out.println(siswaSekolahKeterima.getSiswa().getNama());
+//                System.out.println(siswaSekolahKeterima.getSiswa().getNama());
                 //masukan ke tabel siswaTerima
                 try {
                     String sql = "insert into sekolahTerima values(" +
                         sekolah.getKodeSekolah() +
                         ", " + siswaSekolahKeterima.getSiswa().getNisn() + ")";
-                    System.out.println(sql);
+//                    System.out.println(sql);
                     java.sql.Connection conn = (Connection)SqlConnection.SqlConnectionDB();
                     java.sql.Statement stm = conn.createStatement();
                     int executeUpdate = stm.executeUpdate(sql);
@@ -186,7 +186,7 @@ public class ProsesSeleksi {
                     String sql = "UPDATE siswa SET kodeSekolahTerima=" +
                        siswaSekolahKeterima.getKodeSekolah() +
                        " WHERE nisn=" + siswaSekolahKeterima.getSiswa().getNisn();
-                    System.out.println(sql);
+//                    System.out.println(sql);
                     java.sql.Connection conn = (Connection)SqlConnection.SqlConnectionDB();
                     java.sql.Statement stm = conn.createStatement();
                     int executeUpdate = stm.executeUpdate(sql);

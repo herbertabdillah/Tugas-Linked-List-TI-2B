@@ -24,26 +24,43 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="LNama" min="-2" max="-2" attributes="0"/>
-                  <Component id="LNisn" min="-2" max="-2" attributes="0"/>
-                  <Component id="LPil1" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="LPil2" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="LPil3" alignment="0" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="tombolUbah" min="-2" max="-2" attributes="0"/>
-                  <Component id="CBPil1" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="CBPil3" min="-2" max="-2" attributes="0"/>
-                      <Component id="CBPil2" min="-2" max="-2" attributes="0"/>
-                      <Component id="TFNisn" max="32767" attributes="0"/>
-                      <Component id="TFNama" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="LNisn" min="-2" max="-2" attributes="0"/>
+                                  <Component id="LPil1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="LPil2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="LPil3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="tombolUbah" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CBPil1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CBPil3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CBPil2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="TFNisn" alignment="0" min="-2" pref="106" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="LNama" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                              <Component id="TFNama" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="LNama1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                      <Component id="TFNilai" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="120" max="32767" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="202" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="182" max="-2" attributes="0"/>
           </Group>
@@ -52,15 +69,23 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jScrollPane1" min="-2" pref="239" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="239" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="TFNama" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="LNama" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TFNama" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="LNama1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TFNilai" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="TFNisn" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="LNisn" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -124,13 +149,8 @@
     </Component>
     <Component class="javax.swing.JComboBox" name="CBPil2">
       <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
-          </StringArray>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new javax.swing.DefaultComboBoxModel(arraySekolah.toArray()&#xa;)" type="code"/>
         </Property>
       </Properties>
       <AuxValues>
@@ -139,13 +159,8 @@
     </Component>
     <Component class="javax.swing.JComboBox" name="CBPil3">
       <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
-          </StringArray>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new javax.swing.DefaultComboBoxModel(arraySekolah.toArray()&#xa;)" type="code"/>
         </Property>
       </Properties>
       <AuxValues>
@@ -184,5 +199,15 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JLabel" name="LNama1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nilai"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="TFNilai">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TFNilaiActionPerformed"/>
+      </Events>
+    </Component>
   </SubComponents>
 </Form>
